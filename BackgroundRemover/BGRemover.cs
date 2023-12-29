@@ -116,15 +116,16 @@ namespace BackgroundRemover
                 if (disposing)
                 {
                     //dispose managed resources
-                    if (GoHandle != 0)
-                    {
-                        Rembg_Free(GoHandle);
-                        GoHandle = 0;
-                    }
                 }
+
+                //dispose unmanaged resources
+                if (GoHandle != 0)
+                {
+                    Rembg_Free(GoHandle);
+                    GoHandle = 0;
+                }
+                Disposed = true;
             }
-            //dispose unmanaged resources
-            Disposed = true;
         }
 
         public void Dispose()
