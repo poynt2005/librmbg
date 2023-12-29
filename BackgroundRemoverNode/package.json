@@ -1,0 +1,24 @@
+{
+  "name": "backgroundremovernode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c --bundleConfigAsCjs && powershell -F buildgyp.ps1 -ExecutionPolicy RemoteSigned"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "node-addon-api": "^7.0.0",
+    "rollup": "^4.9.1",
+    "tslib": "^2.6.2"
+  },
+  "dependencies": {
+    "@types/node": "^20.10.5"
+  }
+}
